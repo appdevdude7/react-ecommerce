@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import HomePage from './pages/homepage/HomePage';
-import MenuItem from './components/menu-item/MenuItem';
+
+import Shop from './pages/shop/Shop';
 
 import {
   BrowserRouter as Router,
@@ -20,15 +21,14 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/menu">Menu</Link>
+              <Link to="/shop">Shop</Link>
             </li>
           </ul>
         </nav>
-        <HomePage />
       </div>
       <Switch>
-        <Route path="/menu">
-          <MenuItem />
+        <Route path="/shop">
+          <Shop />
         </Route>
         <Route exact path="/">
           <HomePage />
